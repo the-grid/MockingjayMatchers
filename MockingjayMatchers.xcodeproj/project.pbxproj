@@ -26,7 +26,7 @@
 		2CD395211C44654A0004D6B7 /* MockingjayMatchers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MockingjayMatchers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD395241C44654A0004D6B7 /* MockingjayMatchers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockingjayMatchers.h; sourceTree = "<group>"; };
 		2CD395261C44654A0004D6B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CD3952B1C44654A0004D6B7 /* MockingjayMatchersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockingjayMatchersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CD3952B1C44654A0004D6B7 /* MockingjayMatchersTests-Mac.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MockingjayMatchersTests-Mac.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD395301C44654A0004D6B7 /* MockingjayMatchersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingjayMatchersTests.swift; sourceTree = "<group>"; };
 		2CD395321C44654A0004D6B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				2CD395211C44654A0004D6B7 /* MockingjayMatchers.framework */,
-				2CD3952B1C44654A0004D6B7 /* MockingjayMatchersTests.xctest */,
+				2CD3952B1C44654A0004D6B7 /* MockingjayMatchersTests-Mac.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,9 +100,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2CD395201C44654A0004D6B7 /* MockingjayMatchers */ = {
+		2CD395201C44654A0004D6B7 /* MockingjayMatchers-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CD395351C44654A0004D6B7 /* Build configuration list for PBXNativeTarget "MockingjayMatchers" */;
+			buildConfigurationList = 2CD395351C44654A0004D6B7 /* Build configuration list for PBXNativeTarget "MockingjayMatchers-Mac" */;
 			buildPhases = (
 				2CD3951C1C44654A0004D6B7 /* Sources */,
 				2CD3951D1C44654A0004D6B7 /* Frameworks */,
@@ -113,14 +113,14 @@
 			);
 			dependencies = (
 			);
-			name = MockingjayMatchers;
+			name = "MockingjayMatchers-Mac";
 			productName = MockingjayMatchers;
 			productReference = 2CD395211C44654A0004D6B7 /* MockingjayMatchers.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2CD3952A1C44654A0004D6B7 /* MockingjayMatchersTests */ = {
+		2CD3952A1C44654A0004D6B7 /* MockingjayMatchersTests-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CD395381C44654A0004D6B7 /* Build configuration list for PBXNativeTarget "MockingjayMatchersTests" */;
+			buildConfigurationList = 2CD395381C44654A0004D6B7 /* Build configuration list for PBXNativeTarget "MockingjayMatchersTests-Mac" */;
 			buildPhases = (
 				2CD395271C44654A0004D6B7 /* Sources */,
 				2CD395281C44654A0004D6B7 /* Frameworks */,
@@ -131,9 +131,9 @@
 			dependencies = (
 				2CD3952E1C44654A0004D6B7 /* PBXTargetDependency */,
 			);
-			name = MockingjayMatchersTests;
+			name = "MockingjayMatchersTests-Mac";
 			productName = MockingjayMatchersTests;
-			productReference = 2CD3952B1C44654A0004D6B7 /* MockingjayMatchersTests.xctest */;
+			productReference = 2CD3952B1C44654A0004D6B7 /* MockingjayMatchersTests-Mac.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -166,8 +166,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2CD395201C44654A0004D6B7 /* MockingjayMatchers */,
-				2CD3952A1C44654A0004D6B7 /* MockingjayMatchersTests */,
+				2CD395201C44654A0004D6B7 /* MockingjayMatchers-Mac */,
+				2CD3952A1C44654A0004D6B7 /* MockingjayMatchersTests-Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -210,7 +210,7 @@
 /* Begin PBXTargetDependency section */
 		2CD3952E1C44654A0004D6B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2CD395201C44654A0004D6B7 /* MockingjayMatchers */;
+			target = 2CD395201C44654A0004D6B7 /* MockingjayMatchers-Mac */;
 			targetProxy = 2CD3952D1C44654A0004D6B7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -315,7 +315,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.thegrid.MockingjayMatchers;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MockingjayMatchers;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -333,7 +333,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.thegrid.MockingjayMatchers;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MockingjayMatchers;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -372,7 +372,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CD395351C44654A0004D6B7 /* Build configuration list for PBXNativeTarget "MockingjayMatchers" */ = {
+		2CD395351C44654A0004D6B7 /* Build configuration list for PBXNativeTarget "MockingjayMatchers-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CD395361C44654A0004D6B7 /* Debug */,
@@ -380,7 +380,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		2CD395381C44654A0004D6B7 /* Build configuration list for PBXNativeTarget "MockingjayMatchersTests" */ = {
+		2CD395381C44654A0004D6B7 /* Build configuration list for PBXNativeTarget "MockingjayMatchersTests-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CD395391C44654A0004D6B7 /* Debug */,
