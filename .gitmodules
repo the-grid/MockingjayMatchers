@@ -1,0 +1,3 @@
+[submodule "Carthage/Checkouts/Mockingjay"]
+	path = Carthage/Checkouts/Mockingjay
+	url = https://github.com/kylef/Mockingjay.git

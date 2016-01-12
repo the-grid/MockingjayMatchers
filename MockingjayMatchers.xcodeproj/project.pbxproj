@@ -13,6 +13,8 @@
 		2CD3954A1C4473460004D6B7 /* MockingjayMatchers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD395401C4473460004D6B7 /* MockingjayMatchers.framework */; };
 		2CD395571C4475F30004D6B7 /* MockingjayMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD395241C44654A0004D6B7 /* MockingjayMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CD395591C4476000004D6B7 /* MockingjayMatchersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD395301C44654A0004D6B7 /* MockingjayMatchersTests.swift */; };
+		2CD395601C447B2D0004D6B7 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD3955F1C447B2D0004D6B7 /* Mockingjay.framework */; };
+		2CD395611C447B3C0004D6B7 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD3955F1C447B2D0004D6B7 /* Mockingjay.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,7 @@
 		2CD395321C44654A0004D6B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CD395401C4473460004D6B7 /* MockingjayMatchers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MockingjayMatchers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD395491C4473460004D6B7 /* MockingjayMatchersTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MockingjayMatchersTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CD3955F1C447B2D0004D6B7 /* Mockingjay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mockingjay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD395601C447B2D0004D6B7 /* Mockingjay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD395611C447B3C0004D6B7 /* Mockingjay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +107,7 @@
 			children = (
 				2CD395241C44654A0004D6B7 /* MockingjayMatchers.h */,
 				2CD395261C44654A0004D6B7 /* Info.plist */,
+				2CD3955F1C447B2D0004D6B7 /* Mockingjay.framework */,
 			);
 			path = MockingjayMatchers;
 			sourceTree = "<group>";

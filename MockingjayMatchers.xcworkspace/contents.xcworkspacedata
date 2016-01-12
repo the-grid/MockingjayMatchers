@@ -4,4 +4,7 @@
    <FileRef
       location = "container:MockingjayMatchers.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/Mockingjay/Mockingjay.xcodeproj">
+   </FileRef>
 </Workspace>
