@@ -4,7 +4,6 @@ import Nimble
 import Quick
 
 private func setHTTPHeadersForRequest(request: NSMutableURLRequest) {
-    request.HTTPMethod = "GET"
     request.setValue("application/json", forHTTPHeaderField: "Accept")
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
     request.setValue("gzip;q=1.0,compress;q=0.5", forHTTPHeaderField: "Accept-Encoding")
@@ -23,9 +22,13 @@ class MockingjayMatchersSpec: QuickSpec {
     override func spec() {
         describe("HTTP header matcher") {
             it("should match the correct HTTP headers") {
+                let method: HTTPMethod = .GET
                 let url = "https://example.com/api"
+                
                 let request = NSMutableURLRequest(URL: NSURL(string: url)!)
-                let matcher = api(.GET, url)
+                request.HTTPMethod = method.description
+                
+                let matcher = api(method, url)
                 
                 expect(matcher(request: request)).to(equal(false))
                 
@@ -36,10 +39,14 @@ class MockingjayMatchersSpec: QuickSpec {
         
         describe("HTTP Authorization header matcher") {
             it("should match the correct HTTP Authorization header") {
+                let method: HTTPMethod = .GET
                 let url = "https://example.com/api"
-                let request = NSMutableURLRequest(URL: NSURL(string: url)!)
                 let token = "token"
-                let matcher = api(.GET, url, token: token)
+                
+                let request = NSMutableURLRequest(URL: NSURL(string: url)!)
+                request.HTTPMethod = method.description
+                
+                let matcher = api(method, url, token: token)
                 
                 setHTTPHeadersForRequest(request)
                 expect(matcher(request: request)).to(equal(false))
@@ -51,10 +58,14 @@ class MockingjayMatchersSpec: QuickSpec {
         
         describe("HTTP body matcher") {
             it("should match the correct HTTP body") {
+                let method: HTTPMethod = .GET
                 let url = "https://example.com/api"
-                let request = NSMutableURLRequest(URL: NSURL(string: url)!)
                 let body: [String: AnyObject] = [ "key": "value" ]
-                let matcher = api(.GET, url, body: body)
+                
+                let request = NSMutableURLRequest(URL: NSURL(string: url)!)
+                request.HTTPMethod = method.description
+                
+                let matcher = api(method, url, body: body)
                 
                 setHTTPHeadersForRequest(request)
                 expect(matcher(request: request)).to(equal(false))
@@ -66,10 +77,14 @@ class MockingjayMatchersSpec: QuickSpec {
         
         describe("HTTP Authorization header and HTTP Body matcher") {
             it("should match the correct HTTP Authorization header and HTTP body") {
+                let method: HTTPMethod = .GET
                 let url = "https://example.com/api"
-                let request = NSMutableURLRequest(URL: NSURL(string: url)!)
                 let token = "token"
                 let body: [String: AnyObject] = [ "key": "value" ]
+                
+                let request = NSMutableURLRequest(URL: NSURL(string: url)!)
+                request.HTTPMethod = method.description
+                
                 let matcher = api(.GET, url, token: token, body: body)
                 
                 setHTTPHeadersForRequest(request)
