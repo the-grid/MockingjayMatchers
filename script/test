@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+xcodebuild -workspace MockingjayMatchers.xcworkspace -scheme MockingjayMatchers-Mac -sdk macosx clean test &&
+xcodebuild -workspace MockingjayMatchers.xcworkspace -scheme MockingjayMatchers-iOS -sdk iphonesimulator clean test
