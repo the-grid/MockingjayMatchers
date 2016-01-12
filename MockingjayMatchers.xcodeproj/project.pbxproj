@@ -13,10 +13,12 @@
 		2C9A52E41C447DED0045723B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9A52E01C447DD90045723B /* Quick.framework */; };
 		2CD395251C44654A0004D6B7 /* MockingjayMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD395241C44654A0004D6B7 /* MockingjayMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CD3952C1C44654A0004D6B7 /* MockingjayMatchers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD395211C44654A0004D6B7 /* MockingjayMatchers.framework */; };
-		2CD395311C44654A0004D6B7 /* MockingjayMatchersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD395301C44654A0004D6B7 /* MockingjayMatchersTests.swift */; };
+		2CD395311C44654A0004D6B7 /* MockingjayMatchersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD395301C44654A0004D6B7 /* MockingjayMatchersSpec.swift */; };
 		2CD3954A1C4473460004D6B7 /* MockingjayMatchers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD395401C4473460004D6B7 /* MockingjayMatchers.framework */; };
 		2CD395571C4475F30004D6B7 /* MockingjayMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD395241C44654A0004D6B7 /* MockingjayMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2CD395591C4476000004D6B7 /* MockingjayMatchersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD395301C44654A0004D6B7 /* MockingjayMatchersTests.swift */; };
+		2CD395591C4476000004D6B7 /* MockingjayMatchersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD395301C44654A0004D6B7 /* MockingjayMatchersSpec.swift */; };
+		2CD3955B1C4476680004D6B7 /* MockingjayMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD3955A1C4476680004D6B7 /* MockingjayMatchers.swift */; };
+		2CD3955C1C4476680004D6B7 /* MockingjayMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD3955A1C4476680004D6B7 /* MockingjayMatchers.swift */; };
 		2CD395601C447B2D0004D6B7 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD3955F1C447B2D0004D6B7 /* Mockingjay.framework */; };
 		2CD395611C447B3C0004D6B7 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD3955F1C447B2D0004D6B7 /* Mockingjay.framework */; };
 /* End PBXBuildFile section */
@@ -45,10 +47,11 @@
 		2CD395241C44654A0004D6B7 /* MockingjayMatchers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockingjayMatchers.h; sourceTree = "<group>"; };
 		2CD395261C44654A0004D6B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CD3952B1C44654A0004D6B7 /* MockingjayMatchersTests-Mac.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MockingjayMatchersTests-Mac.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CD395301C44654A0004D6B7 /* MockingjayMatchersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingjayMatchersTests.swift; sourceTree = "<group>"; };
+		2CD395301C44654A0004D6B7 /* MockingjayMatchersSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingjayMatchersSpec.swift; sourceTree = "<group>"; };
 		2CD395321C44654A0004D6B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CD395401C4473460004D6B7 /* MockingjayMatchers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MockingjayMatchers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD395491C4473460004D6B7 /* MockingjayMatchersTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MockingjayMatchersTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CD3955A1C4476680004D6B7 /* MockingjayMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockingjayMatchers.swift; sourceTree = "<group>"; };
 		2CD3955F1C447B2D0004D6B7 /* Mockingjay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mockingjay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,6 +120,7 @@
 			children = (
 				2CD395241C44654A0004D6B7 /* MockingjayMatchers.h */,
 				2CD395261C44654A0004D6B7 /* Info.plist */,
+				2CD3955A1C4476680004D6B7 /* MockingjayMatchers.swift */,
 				2CD3955F1C447B2D0004D6B7 /* Mockingjay.framework */,
 			);
 			path = MockingjayMatchers;
@@ -125,7 +129,7 @@
 		2CD3952F1C44654A0004D6B7 /* MockingjayMatchersTests */ = {
 			isa = PBXGroup;
 			children = (
-				2CD395301C44654A0004D6B7 /* MockingjayMatchersTests.swift */,
+				2CD395301C44654A0004D6B7 /* MockingjayMatchersSpec.swift */,
 				2CD395321C44654A0004D6B7 /* Info.plist */,
 				2C9A52DF1C447DD90045723B /* Nimble.framework */,
 				2C9A52E01C447DD90045723B /* Quick.framework */,
@@ -307,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD3955C1C4476680004D6B7 /* MockingjayMatchers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CD395311C44654A0004D6B7 /* MockingjayMatchersTests.swift in Sources */,
+				2CD395311C44654A0004D6B7 /* MockingjayMatchersSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD3955B1C4476680004D6B7 /* MockingjayMatchers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CD395591C4476000004D6B7 /* MockingjayMatchersTests.swift in Sources */,
+				2CD395591C4476000004D6B7 /* MockingjayMatchersSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +444,7 @@
 		2CD395361C44654A0004D6B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -451,12 +458,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.thegrid.MockingjayMatchers;
 				PRODUCT_NAME = MockingjayMatchers;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		2CD395371C44654A0004D6B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -498,6 +507,7 @@
 		2CD395521C4473460004D6B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -511,6 +521,7 @@
 				PRODUCT_NAME = MockingjayMatchers;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -518,6 +529,7 @@
 		2CD395531C4473460004D6B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -582,6 +594,7 @@
 				2CD395371C44654A0004D6B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CD395381C44654A0004D6B7 /* Build configuration list for PBXNativeTarget "MockingjayMatchersTests-Mac" */ = {
 			isa = XCConfigurationList;
@@ -590,6 +603,7 @@
 				2CD3953A1C44654A0004D6B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CD395511C4473460004D6B7 /* Build configuration list for PBXNativeTarget "MockingjayMatchers-iOS" */ = {
 			isa = XCConfigurationList;
@@ -598,6 +612,7 @@
 				2CD395531C4473460004D6B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CD395541C4473460004D6B7 /* Build configuration list for PBXNativeTarget "MockingjayMatchersTests-iOS" */ = {
 			isa = XCConfigurationList;
@@ -606,6 +621,7 @@
 				2CD395561C4473460004D6B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
