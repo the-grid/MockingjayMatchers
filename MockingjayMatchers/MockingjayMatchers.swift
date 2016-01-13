@@ -69,5 +69,5 @@ private func sortDictionary(dictionary: [String: AnyObject]) -> [String: AnyObje
             let (key, value) = pair
             accumulator[key] = value
             return accumulator
-    }
+        }
 }
