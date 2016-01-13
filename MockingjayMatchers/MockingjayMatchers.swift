@@ -7,10 +7,10 @@ public func api(method: HTTPMethod, _ uri: String)(request: NSURLRequest) -> Boo
         acceptEncoding = headers["Accept-Encoding"],
         contentType = headers["Content-Type"] where
         accept == "application/json" &&
-            contentType == "application/json" &&
-            acceptEncoding == "gzip;q=1.0,compress;q=0.5"
-        else {
-            return false
+        contentType == "application/json" &&
+        acceptEncoding == "gzip;q=1.0,compress;q=0.5"
+    else {
+        return false
     }
     
     return http(method, uri: uri)(request: request)
@@ -20,8 +20,8 @@ public func api(method: HTTPMethod, _ uri: String, token: String)(request: NSURL
     guard let headers = request.allHTTPHeaderFields,
         authorization = headers["Authorization"] where
         authorization == "Bearer \(token)"
-        else {
-            return false
+    else {
+        return false
     }
     
     return api(method, uri)(request: request)
