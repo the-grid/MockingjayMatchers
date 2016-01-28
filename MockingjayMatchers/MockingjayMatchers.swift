@@ -83,5 +83,5 @@ private func sortDictionary(dictionary: [String: AnyObject]) -> [String: AnyObje
             
             accumulator[key] = sortedValue
             return accumulator
-    }
+        }
 }
