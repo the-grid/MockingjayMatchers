@@ -34,7 +34,9 @@ public func api(method: HTTPMethod, _ uri: String, token: String) -> (request: N
 public func api(method: HTTPMethod, _ uri: String, body: [String: AnyObject]) -> (request: NSURLRequest) -> Bool {
     return { request in
         // https://github.com/kylef/Mockingjay/issues/32
-        guard let stream = request.HTTPBodyStream else { return false }
+        guard let stream = request.HTTPBodyStream else {
+            return false
+        }
         
         stream.open()
         
@@ -42,7 +44,9 @@ public func api(method: HTTPMethod, _ uri: String, body: [String: AnyObject]) ->
             return false
         }
         
-        guard let streamDictionary = streamJsonObject as? [String: AnyObject] else { return false }
+        guard let streamDictionary = streamJsonObject as? [String: AnyObject] else {
+            return false
+        }
         
         let sortedStreamDictionary = sortDictionary(streamDictionary)
         let sortedBody = sortDictionary(body)
@@ -50,7 +54,9 @@ public func api(method: HTTPMethod, _ uri: String, body: [String: AnyObject]) ->
         let bodyStreamJsonData = try? NSJSONSerialization.dataWithJSONObject(sortedStreamDictionary, options: NSJSONWritingOptions())
         let bodyJsonData = try? NSJSONSerialization.dataWithJSONObject(sortedBody, options: NSJSONWritingOptions())
         
-        guard bodyStreamJsonData == bodyJsonData else { return false }
+        guard bodyStreamJsonData == bodyJsonData else {
+            return false
+        }
         
         return api(method, uri)(request: request)
     }
@@ -67,7 +73,15 @@ private func sortDictionary(dictionary: [String: AnyObject]) -> [String: AnyObje
         .sort { $0.0 < $1.0 }
         .reduce([:]) { (var accumulator, pair) in
             let (key, value) = pair
-            accumulator[key] = value
+            let sortedValue: AnyObject
+            
+            if let value = value as? [String: AnyObject] {
+                sortedValue = sortDictionary(value)
+            } else {
+                sortedValue = value
+            }
+            
+            accumulator[key] = sortedValue
             return accumulator
-        }
+    }
 }
