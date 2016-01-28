@@ -73,7 +73,15 @@ private func sortDictionary(dictionary: [String: AnyObject]) -> [String: AnyObje
         .sort { $0.0 < $1.0 }
         .reduce([:]) { (var accumulator, pair) in
             let (key, value) = pair
-            accumulator[key] = value
+            let sortedValue: AnyObject
+            
+            if let value = value as? [String: AnyObject] {
+                sortedValue = sortDictionary(value)
+            } else {
+                sortedValue = value
+            }
+            
+            accumulator[key] = sortedValue
             return accumulator
-        }
+    }
 }
