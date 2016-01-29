@@ -75,7 +75,9 @@ private func sortDictionary(dictionary: [String: AnyObject]) -> [String: AnyObje
             let (key, value) = pair
             let sortedValue: AnyObject
             
-            if let value = value as? [String: AnyObject] {
+            if let value = value as? Array<[String: AnyObject]> {
+                sortedValue = value.map(sortDictionary)
+            } else if let value = value as? [String: AnyObject] {
                 sortedValue = sortDictionary(value)
             } else {
                 sortedValue = value
