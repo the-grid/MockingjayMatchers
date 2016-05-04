@@ -71,7 +71,8 @@ public func api(method: HTTPMethod, _ uri: String, token: String, body: [String:
 private func sortDictionary(dictionary: [String: AnyObject]) -> [String: AnyObject] {
     return dictionary
         .sort { $0.0 < $1.0 }
-        .reduce([:]) { (var accumulator, pair) in
+        .reduce([:]) { (accumulator, pair) in
+            var acc = accumulator
             let (key, value) = pair
             let sortedValue: AnyObject
             
@@ -83,7 +84,7 @@ private func sortDictionary(dictionary: [String: AnyObject]) -> [String: AnyObje
                 sortedValue = value
             }
             
-            accumulator[key] = sortedValue
-            return accumulator
+            acc[key] = sortedValue
+            return acc
         }
 }
