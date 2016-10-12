@@ -24,6 +24,7 @@ target 'MockingjayMatchers-iOS' do
 end
 
 target 'MockingjayMatchers-Mac' do
+  platform :osx, '10.11'
   use_frameworks!
 
   default_pods

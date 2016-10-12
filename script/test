@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-xcodebuild -workspace MockingjayMatchers.xcworkspace -scheme MockingjayMatchers-Mac -sdk macosx clean test &&
-xcodebuild -workspace MockingjayMatchers.xcworkspace -scheme MockingjayMatchers-iOS -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6s,OS=9.3" clean test
+xcodebuild -workspace MockingjayMatchers.xcworkspace -scheme MockingjayMatchers-Mac -sdk macosx clean test | xcpretty -c
+xcodebuild -workspace MockingjayMatchers.xcworkspace -scheme MockingjayMatchers-iOS -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6s,OS=10.0" clean test | xcpretty -c
