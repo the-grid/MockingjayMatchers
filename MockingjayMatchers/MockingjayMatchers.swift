@@ -6,7 +6,7 @@ public func api(_ method: HTTPMethod, _ uri: String) -> (_ request: URLRequest) 
         guard let headers = request.allHTTPHeaderFields,
             let accept = headers["Accept"],
             let acceptEncoding = headers["Accept-Encoding"],
-            let contentType = headers["Content-Type"] ,
+            let contentType = headers["Content-Type"],
             accept == "application/json" &&
             contentType == "application/json" &&
             acceptEncoding == "gzip;q=1.0,compress;q=0.5"
@@ -21,7 +21,7 @@ public func api(_ method: HTTPMethod, _ uri: String) -> (_ request: URLRequest) 
 public func api(_ method: HTTPMethod, _ uri: String, token: String) -> (_ request: URLRequest) -> Bool {
     return { request in
         guard let headers = request.allHTTPHeaderFields,
-            let authorization = headers["Authorization"] ,
+            let authorization = headers["Authorization"],
             authorization == "Bearer \(token)"
         else {
             return false
