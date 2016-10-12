@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C9A52E11C447DD90045723B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9A52DF1C447DD90045723B /* Nimble.framework */; };
-		2C9A52E21C447DD90045723B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9A52E01C447DD90045723B /* Quick.framework */; };
-		2C9A52E31C447DED0045723B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9A52DF1C447DD90045723B /* Nimble.framework */; };
-		2C9A52E41C447DED0045723B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9A52E01C447DD90045723B /* Quick.framework */; };
 		2CD395251C44654A0004D6B7 /* MockingjayMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD395241C44654A0004D6B7 /* MockingjayMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CD3952C1C44654A0004D6B7 /* MockingjayMatchers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD395211C44654A0004D6B7 /* MockingjayMatchers.framework */; };
 		2CD395311C44654A0004D6B7 /* MockingjayMatchersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD395301C44654A0004D6B7 /* MockingjayMatchersSpec.swift */; };
@@ -19,8 +15,6 @@
 		2CD395591C4476000004D6B7 /* MockingjayMatchersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD395301C44654A0004D6B7 /* MockingjayMatchersSpec.swift */; };
 		2CD3955B1C4476680004D6B7 /* MockingjayMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD3955A1C4476680004D6B7 /* MockingjayMatchers.swift */; };
 		2CD3955C1C4476680004D6B7 /* MockingjayMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD3955A1C4476680004D6B7 /* MockingjayMatchers.swift */; };
-		2CD395601C447B2D0004D6B7 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD3955F1C447B2D0004D6B7 /* Mockingjay.framework */; };
-		2CD395611C447B3C0004D6B7 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD3955F1C447B2D0004D6B7 /* Mockingjay.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C9A52DF1C447DD90045723B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "../Debug-iphoneos/Nimble.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C9A52E01C447DD90045723B /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD395211C44654A0004D6B7 /* MockingjayMatchers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MockingjayMatchers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD395241C44654A0004D6B7 /* MockingjayMatchers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockingjayMatchers.h; sourceTree = "<group>"; };
 		2CD395261C44654A0004D6B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,7 +44,6 @@
 		2CD395401C4473460004D6B7 /* MockingjayMatchers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MockingjayMatchers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD395491C4473460004D6B7 /* MockingjayMatchersTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MockingjayMatchersTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD3955A1C4476680004D6B7 /* MockingjayMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockingjayMatchers.swift; sourceTree = "<group>"; };
-		2CD3955F1C447B2D0004D6B7 /* Mockingjay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mockingjay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +51,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CD395601C447B2D0004D6B7 /* Mockingjay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,8 +59,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CD3952C1C44654A0004D6B7 /* MockingjayMatchers.framework in Frameworks */,
-				2C9A52E31C447DED0045723B /* Nimble.framework in Frameworks */,
-				2C9A52E41C447DED0045723B /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CD395611C447B3C0004D6B7 /* Mockingjay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,8 +74,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CD3954A1C4473460004D6B7 /* MockingjayMatchers.framework in Frameworks */,
-				2C9A52E11C447DD90045723B /* Nimble.framework in Frameworks */,
-				2C9A52E21C447DD90045723B /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +106,6 @@
 				2CD395241C44654A0004D6B7 /* MockingjayMatchers.h */,
 				2CD395261C44654A0004D6B7 /* Info.plist */,
 				2CD3955A1C4476680004D6B7 /* MockingjayMatchers.swift */,
-				2CD3955F1C447B2D0004D6B7 /* Mockingjay.framework */,
 			);
 			path = MockingjayMatchers;
 			sourceTree = "<group>";
@@ -131,8 +115,6 @@
 			children = (
 				2CD395301C44654A0004D6B7 /* MockingjayMatchersSpec.swift */,
 				2CD395321C44654A0004D6B7 /* Info.plist */,
-				2C9A52DF1C447DD90045723B /* Nimble.framework */,
-				2C9A52E01C447DD90045723B /* Quick.framework */,
 			);
 			path = MockingjayMatchersTests;
 			sourceTree = "<group>";
