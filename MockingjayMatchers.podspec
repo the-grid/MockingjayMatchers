@@ -6,7 +6,6 @@ Pod::Spec.new do |s|
   s.license              = { :type => "MIT" }
   s.author               = { "Nick Velloff" => "nick.velloff@gmail.com" }
   s.social_media_url     = "https://twitter.com/nickvelloff"
-  s.platform             = :ios
   s.platform             = :ios, "9.0"
   s.source               = { :git => "https://github.com/the-grid/MockingjayMatchers.git", :tag => "#{s.version}" }
   s.source_files         = "Classes", "MockingjayMatchers/**/*.{h,m,Swift}"
