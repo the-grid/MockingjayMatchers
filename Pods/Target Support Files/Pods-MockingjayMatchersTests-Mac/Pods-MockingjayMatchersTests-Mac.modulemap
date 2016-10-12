@@ -1,0 +1,6 @@
+framework module Pods_MockingjayMatchersTests_Mac {
+  umbrella header "Pods-MockingjayMatchersTests-Mac-umbrella.h"
+
+  export *
+  module * { export * }
+}
