@@ -1,6 +1,11 @@
 language: objective-c
-osx_image: xcode7.3
-git:
-  submodules: false
-install: script/bootstrap
-script: script/test
+osx_image: xcode8
+before_install:
+  - gem install cocoapods --no-document --quiet
+  - gem install xcpretty --no-document --quiet
+  - rvm get head 
+install: script/update
+script: 
+  - xcodebuild -version
+  - xcodebuild -showsdks
+  - script/test

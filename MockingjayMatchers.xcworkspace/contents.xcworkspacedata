@@ -2,15 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "container:MockingjayMatchers.xcodeproj">
+      location = "group:MockingjayMatchers.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Carthage/Checkouts/Mockingjay/Mockingjay.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/Nimble/Nimble.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/Quick/Quick.xcodeproj">
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
