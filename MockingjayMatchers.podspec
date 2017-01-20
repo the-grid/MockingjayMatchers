@@ -12,5 +12,5 @@ Pod::Spec.new do |s|
   s.requires_arc         = true
   s.dependency "Nimble", "~> 5.0.0"
   s.dependency "Quick", "~> 0.10.0"
-  s.dependency "Mockingjay", "~> 1.3.0"
+  s.dependency "Mockingjay", "~> 2.0.0"
 end
